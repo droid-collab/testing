@@ -81,7 +81,6 @@ export default function Home() {
           </p>
 
           <div className="hero__actions">
-            <Link to="/register" className="btn btn--gold">Register as Delegate</Link>
             <Link to="/brochure" className="btn btn--outline">View Brochure</Link>
           </div>
         </div>
@@ -202,12 +201,12 @@ export default function Home() {
       <section className="cta-banner container">
         <div className="cta-banner__inner">
           <div className="cta-banner__text">
-            <span className="section-label">WISMUN 2K26 — Registrations Open</span>
+            <span className="section-label">WISMUN 2K26</span>
             <h2>Ready to take the floor?</h2>
-            <p>Spots are limited. Secure your committee allocation today.</p>
+            <p>Get the full conference details and committee breakdown in the brochure.</p>
           </div>
           <div className="cta-banner__actions">
-            <Link to="/register" className="btn btn--gold">Register Now</Link>
+            <Link to="/brochure" className="btn btn--gold">View Brochure</Link>
             <Link to="/contact"  className="btn btn--ghost">Have Questions?</Link>
           </div>
         </div>

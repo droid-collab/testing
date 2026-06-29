@@ -82,7 +82,6 @@ mun-website/
 │   │   └── Footer.js / .css
 │   └── pages/
 │       ├── Home.js / .css
-│       ├── Register.js / .css
 │       ├── Brochure.js / .css
 │       └── Contact.js / .css
 ├── package.json              ← Set homepage here before deploying

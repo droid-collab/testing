@@ -26,7 +26,6 @@ export default function Footer() {
             <h4>Navigate</h4>
             <ul>
               <li><Link to="/">Home</Link></li>
-              <li><Link to="/register">Register</Link></li>
               <li><Link to="/brochure">Brochure</Link></li>
               <li><Link to="/contact">Contact</Link></li>
             </ul>
