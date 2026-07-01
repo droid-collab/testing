@@ -74,13 +74,13 @@
 .hero__logos {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
   margin-bottom: 2rem;
   flex-wrap: wrap;
 }
 
 .hero__logo-img {
-  height: 56px;
+  height: 44px;
   width: auto;
   object-fit: contain;
   filter: brightness(0) invert(1);
@@ -89,7 +89,7 @@
 }
 
 .hero__logo-img--wismun {
-  height: 48px;
+  height: 38px;
   filter: none;
   opacity: 1;
 }
@@ -210,6 +210,8 @@
 }
 
 .about__card:hover { border-color: rgba(200, 168, 75, 0.4); transform: translateY(-3px); }
+
+.about__card-icon { font-size: 1.5rem; margin-bottom: 0.6rem; }
 
 .about__card h3 {
   font-size: 0.88rem;
