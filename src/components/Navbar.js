@@ -31,9 +31,10 @@ export default function Navbar() {
 
         {/* Desktop nav links */}
         <ul className="navbar__links">
-          <li><NavLink to="/"          end onClick={closeMenu}>Home</NavLink></li>
-          <li><NavLink to="/brochure"  onClick={closeMenu}>Brochure</NavLink></li>
-          <li><NavLink to="/contact"   onClick={closeMenu}>Contact</NavLink></li>
+          <li><NavLink to="/"              end onClick={closeMenu}>Home</NavLink></li>
+          <li><NavLink to="/registrations"     onClick={closeMenu}>Registrations</NavLink></li>
+          <li><NavLink to="/brochure"          onClick={closeMenu}>Brochure</NavLink></li>
+          <li><NavLink to="/contact"           onClick={closeMenu}>Contact</NavLink></li>
         </ul>
 
         {/* Hamburger */}
@@ -48,9 +49,10 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       <div className={`navbar__mobile ${menuOpen ? 'navbar__mobile--open' : ''}`}>
-        <NavLink to="/"         end onClick={closeMenu}>Home</NavLink>
-        <NavLink to="/brochure"     onClick={closeMenu}>Brochure</NavLink>
-        <NavLink to="/contact"      onClick={closeMenu}>Contact</NavLink>
+        <NavLink to="/"              end onClick={closeMenu}>Home</NavLink>
+        <NavLink to="/registrations"     onClick={closeMenu}>Registrations</NavLink>
+        <NavLink to="/brochure"          onClick={closeMenu}>Brochure</NavLink>
+        <NavLink to="/contact"           onClick={closeMenu}>Contact</NavLink>
       </div>
     </nav>
   );
