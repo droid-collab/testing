@@ -17,18 +17,24 @@ export default function Navbar() {
 
   return (
     <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
-      <div className="navbar__inner">
-        {/* Logo */}
-        <Link to="/" className="navbar__logo" onClick={closeMenu}>
-          <img src="https://wismun.in/img/logo-brand/witty.png"  alt="Witty International School" className="navbar__logo-img" />
-          <img src="https://wismun.in/img/logo-brand/gsg.png"    alt="GSG"     className="navbar__logo-img" />
-          <img src="https://wismun.in/img/logo-brand/wismun.png" alt="WISMUN"  className="navbar__logo-img navbar__logo-img--wismun" />
-          <span className="navbar__logo-text">
-            <span className="navbar__logo-main">WISMUN</span>
-            <span className="navbar__logo-sub">Witty International Model United Nations</span>
-          </span>
-        </Link>
+      {/* Brand bar — Witty (left) · WISMUN (center) · GSG (right) */}
+      <div className="navbar__brand-bar">
+        <div className="navbar__brand-inner">
+          <img src="https://wismun.in/img/logo-brand/witty.png" alt="Witty International School" className="navbar__brand-logo navbar__brand-logo--side navbar__brand-logo--left" />
 
+          <Link to="/" className="navbar__brand-center" onClick={closeMenu}>
+            <img src="https://wismun.in/img/logo-brand/wismun.png" alt="WISMUN" className="navbar__brand-logo navbar__brand-logo--wismun" />
+            <span className="navbar__logo-text">
+              <span className="navbar__logo-main">WISMUN</span>
+              <span className="navbar__logo-sub">Witty International Model United Nations</span>
+            </span>
+          </Link>
+
+          <img src="https://wismun.in/img/logo-brand/gsg.png" alt="GSG" className="navbar__brand-logo navbar__brand-logo--side navbar__brand-logo--right" />
+        </div>
+      </div>
+
+      <div className="navbar__inner">
         {/* Desktop nav links */}
         <ul className="navbar__links">
           <li><NavLink to="/"              end onClick={closeMenu}>Home</NavLink></li>

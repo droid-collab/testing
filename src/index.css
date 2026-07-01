@@ -17,11 +17,13 @@
   --text-body:  #d4cfc4;
   --text-muted: #8a8680;
 
-  --font-display: 'Playfair Display', Georgia, serif;
-  --font-body:    'Inter', system-ui, sans-serif;
-  --font-mono:    'Space Mono', monospace;
+  --font-display: 'Times New Roman', Times, serif;
+  --font-body:    'Times New Roman', Times, serif;
+  --font-mono:    'Times New Roman', Times, serif;
 
-  --nav-height:  72px;
+  --nav-brand-height: 86px;
+  --nav-menu-height:  52px;
+  --nav-height: calc(var(--nav-brand-height) + var(--nav-menu-height));
   --max-width:  1200px;
   --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -101,6 +103,6 @@ button { cursor: pointer; font-family: var(--font-body); }
 ::selection { background: var(--gold-dim); color: var(--ivory); }
 
 @media (max-width: 768px) {
-  :root { --nav-height: 60px; }
+  :root { --nav-brand-height: 66px; --nav-menu-height: 44px; }
   .container { padding: 0 1.1rem; }
 }

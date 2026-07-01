@@ -31,6 +31,8 @@ const stats = [
 const board = [
   { role: 'Secretary General',         name: 'To Be Announced' },
   { role: 'Deputy Secretary General',  name: 'To Be Announced' },
+  { role: 'Director General',          name: 'To Be Announced' },
+  { role: 'Director General',          name: 'To Be Announced' },
 ];
 
 export default function Home() {
@@ -60,9 +62,9 @@ export default function Home() {
 
         <div className="hero__content container">
           <div className="hero__logos">
-            <img src="https://wismun.in/img/logo-brand/witty.png"  alt="Witty International School" className="hero__logo-img" />
-            <img src="https://wismun.in/img/logo-brand/gsg.png"    alt="GSG"    className="hero__logo-img" />
+            <img src="https://wismun.in/img/logo-brand/witty.png"  alt="Witty International School" className="hero__logo-img hero__logo-img--left" />
             <img src="https://wismun.in/img/logo-brand/wismun.png" alt="WISMUN" className="hero__logo-img hero__logo-img--wismun" />
+            <img src="https://wismun.in/img/logo-brand/gsg.png"    alt="GSG"    className="hero__logo-img hero__logo-img--right" />
           </div>
 
           <p className="hero__eyebrow">
@@ -122,22 +124,18 @@ export default function Home() {
 
         <div className="about__right">
           <div className="about__card">
-            <div className="about__card-icon">🏛</div>
             <h3>Parliamentary Procedure</h3>
             <p>Formal debate following UN Rules of Procedure — resolutions, amendments, and voting blocs.</p>
           </div>
           <div className="about__card">
-            <div className="about__card-icon">🌐</div>
             <h3>Global Perspectives</h3>
             <p>Represent nations across the geopolitical spectrum and argue positions beyond your own views.</p>
           </div>
           <div className="about__card">
-            <div className="about__card-icon">🏆</div>
             <h3>Awards & Recognition</h3>
             <p>Best Delegate, Outstanding Delegate, and Verbal Commendation awards across all committees.</p>
           </div>
           <div className="about__card">
-            <div className="about__card-icon">📜</div>
             <h3>Research & Writing</h3>
             <p>Submit your Position Paper before the conference and demonstrate deep country research.</p>
           </div>
@@ -178,8 +176,8 @@ export default function Home() {
             </p>
           </div>
           <div className="exec-board__grid">
-            {board.map((person) => (
-              <div key={person.role} className="exec-card">
+            {board.map((person, i) => (
+              <div key={`${person.role}-${i}`} className="exec-card">
                 <div className="exec-card__avatar">
                   <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="exec-card__avatar-svg">
                     <circle cx="40" cy="30" r="18" fill="rgba(200,168,75,0.25)" stroke="rgba(200,168,75,0.5)" strokeWidth="1.5"/>
