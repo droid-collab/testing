@@ -1,0 +1,200 @@
+/* ── SHARED HERO ─────────────────────────────── */
+.reg-hero {
+  background: var(--navy-mid);
+  border-bottom: 1px solid rgba(200, 168, 75, 0.15);
+  padding: 4rem 0 3rem;
+}
+
+.reg-hero h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 0.75rem;
+}
+
+.reg-hero p {
+  color: var(--text-muted);
+  max-width: 520px;
+  font-size: 0.95rem;
+}
+
+/* ── LANDING: TWO PATHS ──────────────────────── */
+.reg-paths {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding-top: 3.5rem;
+  padding-bottom: 5rem;
+}
+
+.reg-path-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--navy-mid);
+  border: 1px solid rgba(200, 168, 75, 0.18);
+  padding: 2.5rem 2rem;
+  text-decoration: none;
+  transition: border-color 0.25s var(--ease-smooth), transform 0.2s var(--ease-smooth), background 0.25s;
+}
+
+.reg-path-card:hover {
+  border-color: var(--gold);
+  background: var(--navy-light);
+  transform: translateY(-3px);
+}
+
+.reg-path-card__label {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.9rem;
+}
+
+.reg-path-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--ivory);
+}
+
+.reg-path-card p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.75rem;
+  flex-grow: 1;
+}
+
+.reg-path-card__go {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.reg-path-card__go svg { transition: transform 0.2s var(--ease-smooth); }
+.reg-path-card:hover .reg-path-card__go svg { transform: translateX(4px); }
+
+/* ── SUB-PAGE: ACTION LINKS ──────────────────── */
+.reg-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-top: 3rem;
+}
+
+.reg-btn {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.95rem 2rem;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, transform 0.15s;
+}
+
+.reg-btn--primary {
+  background: var(--gold);
+  color: var(--navy);
+}
+.reg-btn--primary:hover {
+  background: var(--gold-light);
+  color: var(--navy);
+  transform: translateY(-2px);
+}
+
+.reg-btn--outline {
+  background: transparent;
+  border: 1.5px solid var(--gold);
+  color: var(--gold);
+}
+.reg-btn--outline:hover {
+  background: var(--gold);
+  color: var(--navy);
+  transform: translateY(-2px);
+}
+
+.reg-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-decoration: none;
+  margin-bottom: 1.25rem;
+  transition: color 0.2s;
+}
+.reg-back:hover { color: var(--gold); }
+
+/* ── SUB-PAGE: INSTRUCTIONS STEPS ────────────── */
+.reg-steps-section {
+  padding-top: 3.5rem;
+  padding-bottom: 5rem;
+  scroll-margin-top: calc(var(--nav-height) + 1rem);
+}
+
+.reg-steps-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.reg-steps-section > .section-label { margin-bottom: 0.75rem; }
+
+.reg-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: rgba(200, 168, 75, 0.1);
+  border: 1px solid rgba(200, 168, 75, 0.12);
+  margin-top: 2rem;
+}
+
+.reg-step {
+  display: grid;
+  grid-template-columns: 88px 1fr;
+  background: var(--navy);
+  transition: background 0.2s;
+}
+.reg-step:hover { background: var(--navy-mid); }
+
+.reg-step__num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  background: rgba(200, 168, 75, 0.06);
+  border-right: 1px solid rgba(200, 168, 75, 0.12);
+  padding: 1.4rem 0.5rem;
+}
+
+.reg-step__body {
+  padding: 1.4rem 1.6rem;
+  font-size: 0.9rem;
+  color: var(--text-body);
+  line-height: 1.6;
+}
+
+/* ── RESPONSIVE ──────────────────────────────── */
+@media (max-width: 900px) {
+  .reg-paths { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  .reg-hero h1 { font-size: 1.75rem; }
+  .reg-actions { flex-direction: column; }
+  .reg-btn { text-align: center; }
+  .reg-step { grid-template-columns: 64px 1fr; }
+  .reg-step__body { padding: 1.1rem 1.1rem; }
+}

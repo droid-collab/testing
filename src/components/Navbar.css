@@ -1,0 +1,214 @@
+/* ── BASE NAVBAR ─────────────────────────────── */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  /* Always dark on mobile so hamburger is visible; transparent on desktop until scroll */
+  background: rgba(10, 22, 40, 0.97);
+  transition: box-shadow 0.3s var(--ease-smooth);
+}
+
+/* On desktop only — go transparent until scrolled */
+@media (min-width: 901px) {
+  .navbar { background: transparent; }
+  .navbar--scrolled {
+    background: rgba(10, 22, 40, 0.96);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 1px 0 rgba(200, 168, 75, 0.15);
+  }
+}
+
+/* ── INNER BAR ───────────────────────────────── */
+.navbar__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* ── LOGO ────────────────────────────────────── */
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.navbar__logo-img {
+  height: 30px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
+  flex-shrink: 0;
+  display: block;
+}
+
+.navbar__logo-img--wismun {
+  height: 26px;
+  filter: none;
+  opacity: 1;
+}
+
+.navbar__logo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.navbar__logo-main {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ivory);
+  letter-spacing: 0.08em;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.navbar__logo-sub {
+  font-family: var(--font-mono);
+  font-size: 0.48rem;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* ── DESKTOP NAV LINKS ───────────────────────── */
+.navbar__links {
+  display: flex;
+  list-style: none;
+  gap: 0.25rem;
+  margin-left: auto;
+}
+
+.navbar__links a {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-body);
+  padding: 0.5rem 0.875rem;
+  border-radius: 4px;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: color 0.2s, background 0.2s;
+}
+
+.navbar__links a:hover { color: var(--ivory); background: rgba(200, 168, 75, 0.1); }
+.navbar__links a.active { color: var(--gold); background: rgba(200, 168, 75, 0.1); }
+
+/* ── DESKTOP CTA ─────────────────────────────── */
+.navbar__cta {
+  flex-shrink: 0;
+  background: var(--gold);
+  color: var(--navy) !important;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.6rem 1.25rem;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+}
+.navbar__cta:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+/* ── HAMBURGER ───────────────────────────────── */
+.navbar__hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  padding: 10px;
+  margin-left: auto;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.navbar__hamburger span {
+  display: block;
+  width: 26px;
+  height: 2.5px;
+  background: var(--ivory);
+  border-radius: 2px;
+  transition: transform 0.25s, opacity 0.25s;
+  transform-origin: center;
+}
+
+.navbar__hamburger.open span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+.navbar__hamburger.open span:nth-child(2) { opacity: 0; }
+.navbar__hamburger.open span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+
+/* ── MOBILE DROPDOWN ─────────────────────────── */
+.navbar__mobile {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease-in-out;
+  background: rgba(8, 18, 34, 0.99);
+  border-top: 1px solid rgba(200, 168, 75, 0.2);
+}
+
+.navbar__mobile--open {
+  max-height: 400px;
+}
+
+.navbar__mobile a {
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-body);
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  text-decoration: none;
+  transition: color 0.2s, background 0.2s;
+}
+
+.navbar__mobile a:hover { color: var(--gold); background: rgba(200, 168, 75, 0.06); }
+.navbar__mobile a.active { color: var(--gold); }
+
+.navbar__mobile-cta {
+  display: block;
+  background: var(--gold) !important;
+  color: var(--navy) !important;
+  font-weight: 700 !important;
+  font-size: 0.85rem !important;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 1rem 1.5rem !important;
+  border-bottom: none !important;
+  margin: 0.75rem 1.5rem 1.25rem;
+}
+.navbar__mobile-cta:hover { background: var(--gold-light) !important; color: var(--navy) !important; }
+
+/* ── RESPONSIVE ──────────────────────────────── */
+
+/* Desktop: hide hamburger + mobile menu */
+@media (min-width: 901px) {
+  .navbar__hamburger { display: none !important; }
+  .navbar__mobile    { display: none !important; }
+}
+
+/* Mobile: hide desktop links + CTA, show hamburger */
+@media (max-width: 900px) {
+  .navbar__links { display: none; }
+  .navbar__cta   { display: none; }
+  .navbar__hamburger { display: flex; }
+  .navbar__inner { padding: 0 1rem; }
+}
+
+/* Very small screens: shrink logo images, hide text */
+@media (max-width: 420px) {
+  .navbar__logo-img       { height: 24px; }
+  .navbar__logo-img--wismun { height: 20px; }
+  .navbar__logo-text      { display: none; }
+}
