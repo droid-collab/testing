@@ -32,6 +32,7 @@ const board = [
   { role: 'Secretary General',         name: 'To Be Announced' },
   { role: 'Deputy Secretary General',  name: 'To Be Announced' },
   { role: 'Director General',          name: 'To Be Announced' },
+  { role: 'Director General',          name: 'To Be Announced' },
 ];
 
 export default function Home() {
@@ -117,22 +118,18 @@ export default function Home() {
 
         <div className="about__right">
           <div className="about__card">
-            <div className="about__card-icon">🏛</div>
             <h3>Parliamentary Procedure</h3>
             <p>Formal debate following UN Rules of Procedure — resolutions, amendments, and voting blocs.</p>
           </div>
           <div className="about__card">
-            <div className="about__card-icon">🌐</div>
             <h3>Global Perspectives</h3>
             <p>Represent nations across the geopolitical spectrum and argue positions beyond your own views.</p>
           </div>
           <div className="about__card">
-            <div className="about__card-icon">🏆</div>
             <h3>Awards & Recognition</h3>
             <p>Best Delegate, Outstanding Delegate, and Verbal Commendation awards across all committees.</p>
           </div>
           <div className="about__card">
-            <div className="about__card-icon">📜</div>
             <h3>Research & Writing</h3>
             <p>Submit your Position Paper before the conference and demonstrate deep country research.</p>
           </div>
