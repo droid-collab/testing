@@ -31,6 +31,7 @@ const stats = [
 const board = [
   { role: 'Secretary General',         name: 'To Be Announced' },
   { role: 'Deputy Secretary General',  name: 'To Be Announced' },
+  { role: 'Director General',          name: 'To Be Announced' },
 ];
 
 export default function Home() {
@@ -59,12 +60,6 @@ export default function Home() {
         <div className="hero__bg-glow" />
 
         <div className="hero__content container">
-          <div className="hero__logos">
-            <img src="https://wismun.in/img/logo-brand/witty.png"  alt="Witty International School" className="hero__logo-img" />
-            <img src="https://wismun.in/img/logo-brand/gsg.png"    alt="GSG"    className="hero__logo-img" />
-            <img src="https://wismun.in/img/logo-brand/wismun.png" alt="WISMUN" className="hero__logo-img hero__logo-img--wismun" />
-          </div>
-
           <p className="hero__eyebrow">
             <span className="hero__eyebrow-line" /> Sixth Edition · 2K26 <span className="hero__eyebrow-line" />
           </p>

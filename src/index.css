@@ -5,21 +5,23 @@
 }
 
 :root {
-  --navy:       #0a1628;
-  --navy-mid:   #122040;
-  --navy-light: #1c3260;
-  --gold:       #c8a84b;
-  --gold-light: #e2c97e;
-  --gold-dim:   #8a6f2e;
-  --ivory:      #f5f0e8;
-  --ivory-dim:  #e8e0cc;
+  /* Bright, light theme palette (no dark backgrounds) */
+  --navy:       #ffffff;   /* primary page background */
+  --navy-mid:   #f1f5fd;   /* card / section background */
+  --navy-light: #e3ecfb;   /* hover / accent-light background */
+  --gold:       #d99a1f;   /* accent color */
+  --gold-light: #f0b93e;
+  --gold-dim:   #b97e12;
+  --ivory:      #172142;   /* heading / dark text */
+  --ivory-dim:  #2c3a66;
   --white:      #ffffff;
-  --text-body:  #d4cfc4;
-  --text-muted: #8a8680;
+  --text-body:  #333f5c;   /* body copy */
+  --text-muted: #66738f;   /* muted secondary text */
+  --on-gold:    #172142;   /* text color used on top of gold buttons */
 
-  --font-display: 'Playfair Display', Georgia, serif;
-  --font-body:    'Inter', system-ui, sans-serif;
-  --font-mono:    'Space Mono', monospace;
+  --font-display: Arial, Helvetica, sans-serif;
+  --font-body:    Arial, Helvetica, sans-serif;
+  --font-mono:    Arial, Helvetica, sans-serif;
 
   --nav-height:  72px;
   --max-width:  1200px;
@@ -95,10 +97,10 @@ button { cursor: pointer; font-family: var(--font-body); }
 
 /* Scrollbar */
 ::-webkit-scrollbar { width: 5px; }
-::-webkit-scrollbar-track { background: var(--navy); }
-::-webkit-scrollbar-thumb { background: var(--navy-light); border-radius: 3px; }
+::-webkit-scrollbar-track { background: var(--navy-mid); }
+::-webkit-scrollbar-thumb { background: var(--gold-dim); border-radius: 3px; }
 
-::selection { background: var(--gold-dim); color: var(--ivory); }
+::selection { background: var(--gold-light); color: var(--ivory); }
 
 @media (max-width: 768px) {
   :root { --nav-height: 60px; }

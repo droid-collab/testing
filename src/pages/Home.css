@@ -12,19 +12,19 @@
   white-space: nowrap;
 }
 
-.btn--gold { background: var(--gold); color: var(--navy); }
+.btn--gold { background: var(--gold); color: var(--on-gold); }
 .btn--gold:hover {
   background: var(--gold-light);
-  color: var(--navy);
+  color: var(--on-gold);
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(200, 168, 75, 0.3);
 }
 
-.btn--outline { border: 1.5px solid var(--gold); color: var(--gold); background: transparent; }
-.btn--outline:hover { background: rgba(200, 168, 75, 0.1); color: var(--gold-light); }
+.btn--outline { border: 1.5px solid var(--gold); color: var(--gold-dim); background: transparent; }
+.btn--outline:hover { background: rgba(200, 168, 75, 0.1); color: var(--gold-dim); }
 
-.btn--ghost { border: 1.5px solid rgba(255,255,255,0.2); color: var(--ivory); background: transparent; }
-.btn--ghost:hover { border-color: rgba(255,255,255,0.5); background: rgba(255,255,255,0.05); }
+.btn--ghost { border: 1.5px solid rgba(23,33,66,0.2); color: var(--ivory); background: transparent; }
+.btn--ghost:hover { border-color: rgba(23,33,66,0.4); background: rgba(23,33,66,0.05); }
 
 /* ── HERO ──────────────────────────────────── */
 .hero {
@@ -290,9 +290,9 @@
 
 .exec-board__grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  max-width: 680px;
+  max-width: 900px;
   margin: 0 auto;
 }
 

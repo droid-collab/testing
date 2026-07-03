@@ -100,11 +100,11 @@
 
 .reg-btn--primary {
   background: var(--gold);
-  color: var(--navy);
+  color: var(--on-gold);
 }
 .reg-btn--primary:hover {
   background: var(--gold-light);
-  color: var(--navy);
+  color: var(--on-gold);
   transform: translateY(-2px);
 }
 
@@ -115,7 +115,7 @@
 }
 .reg-btn--outline:hover {
   background: var(--gold);
-  color: var(--navy);
+  color: var(--on-gold);
   transform: translateY(-2px);
 }
 

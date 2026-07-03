@@ -241,7 +241,7 @@
 
 .cf-submit {
   background: var(--gold);
-  color: var(--navy);
+  color: var(--on-gold);
   font-family: var(--font-body);
   font-size: 0.85rem;
   font-weight: 700;
@@ -316,7 +316,7 @@
 
 .contact-success__btn:hover {
   background: var(--gold);
-  color: var(--navy);
+  color: var(--on-gold);
 }
 
 @media (max-width: 900px) {

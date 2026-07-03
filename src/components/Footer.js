@@ -12,13 +12,13 @@ export default function Footer() {
 
           <div className="footer__brand">
             <div className="footer__logo">
-              <img src="https://wismun.in/img/logo-brand/witty.png"  alt="Witty International School" className="footer__logo-img" />
               <img src="https://wismun.in/img/logo-brand/gsg.png"    alt="GSG"    className="footer__logo-img" />
               <img src="https://wismun.in/img/logo-brand/wismun.png" alt="WISMUN" className="footer__logo-img footer__logo-img--wismun" />
+              <img src="https://wismun.in/img/logo-brand/witty.png"  alt="Witty International School" className="footer__logo-img" />
             </div>
             <p className="footer__logo-name">WISMUN 2K26</p>
             <p className="footer__tagline">
-              Witty International Model United Nations, Sixth Edition — Where global minds converge to deliberate, debate, and drive change.
+              Sixth Edition — Where global minds converge to deliberate, debate, and drive change.
             </p>
           </div>
 
