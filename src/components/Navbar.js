@@ -23,10 +23,7 @@ export default function Navbar() {
           <img src="https://wismun.in/img/logo-brand/gsg.png"    alt="GSG"     className="navbar__logo-img" />
           <img src="https://wismun.in/img/logo-brand/wismun.png" alt=""  className="navbar__logo-img navbar__logo-img--wismun" />
           <img src="https://wismun.in/img/logo-brand/witty.png"  alt="Witty International School" className="navbar__logo-img" />
-          <span className="navbar__logo-text">
-            <span className="navbar__logo-main">WISMUN</span>
-          </span>
-        </Link>
+                  </Link>
 
         {/* Desktop nav links */}
         <ul className="navbar__links">
